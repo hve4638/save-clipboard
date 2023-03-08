@@ -1,8 +1,12 @@
-﻿namespace SaveClipboardImg
+﻿using System.Drawing.Imaging;
+using System.Security.AccessControl;
+using System.Security.Principal;
+
+namespace SaveClipboardImg
 {
     public static class Utils
     {
-        public static bool IsValid(string path)
+        public static bool IsValidPath(string path)
         {
             return Path.IsPathRooted(path) && Path.GetInvalidPathChars().All(c => !path.Contains(c));
         }
@@ -15,11 +19,10 @@
             return Path.Combine(path1, path2);
         }
 
-        public static string GetPNGFileName()
+        public static string GetNowDateString()
         {
-            DateTime now = DateTime.Now;
-            string formmatted = now.ToString("yyyyMMdd_HHmmss_fff");
-            return $"image_{formmatted}.png";
+            return DateTime.Now.ToString("yyyyMMdd_HHmmss_fff");
         }
+
     }
 }

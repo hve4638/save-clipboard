@@ -1,6 +1,7 @@
 using System;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Windows.Forms;
 
 namespace SaveClipboardImg
@@ -11,20 +12,42 @@ namespace SaveClipboardImg
         static void Main(string[] args)
         {
             string path = "";
-            if (args.Length > 0 && Utils.IsValid(args[0])) path = args[0];
+
+            if (args.Length > 0 && Utils.IsValidPath(args[0]))
+            {
+                try
+                {
+                    SaveClipborad(path);
+                }
+                catch(UnauthorizedAccessException)
+                {
+                    MessageBox.Show("Access to this folder is denied");
+                }
+                
+            }
+        }
+
+        static void SaveClipborad(string path)
+        {
+            var now = Utils.GetNowDateString();
 
             if (Clipboard.ContainsImage())
             {
-                Image clipboardImage = Clipboard.GetImage();
+                var image = Clipboard.GetImage();
 
-                var filename = Utils.GetPNGFileName();
+                var filename = $"clipboard_{now}.png";
                 var fullPath = Utils.CombinePath(path, filename);
-                clipboardImage.Save(fullPath, ImageFormat.Png);
-                //Console.WriteLine($"Image saved to {fullPath}");
+                image.Save(fullPath, ImageFormat.Png);
             }
-            else
+            else if (Clipboard.ContainsText())
             {
-                //Console.WriteLine("No image found on clipboard");
+                var text = Clipboard.GetText();
+
+                var filename = $"clipboard_{now}.txt";
+                var fullPath = Utils.CombinePath(path, filename);
+
+                using StreamWriter writer = new(fullPath);
+                writer.Write(text);
             }
         }
     }
