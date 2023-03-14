@@ -15,7 +15,7 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_7C5C1EAEB6CD4E0FAAAA38D1C26B0D74"
+        "MsmKey" = "8:_174D3AFC79A140E4827163103B6A9FEC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -44,6 +44,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -68,6 +76,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -86,30 +102,20 @@
         {
             "LaunchCondition"
             {
+                "{A06ECF26-33A3-4562-8140-9B0E340D4F24}:_3199432BB6D041D59A88D56888AC2473"
+                {
+                "Name" = "8:.NET Core"
+                "Message" = "8:[VSDNETCOREMSG]"
+                "AllowLaterVersions" = "11:FALSE"
+                "InstallUrl" = "8:https://dotnet.microsoft.com/download/dotnet-core/[NetCoreVerMajorDotMinor]"
+                "IsNETCore" = "11:TRUE"
+                "Architecture" = "2:0"
+                "Runtime" = "2:0"
+                }
             }
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7C5C1EAEB6CD4E0FAAAA38D1C26B0D74"
-            {
-            "SourcePath" = "8:..\\ExportFile\\saveclipboard.exe"
-            "TargetName" = "8:saveclipboard.exe"
-            "Tag" = "8:"
-            "Folder" = "8:_3119D63190734BEBAB972C0166011491"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
         }
         "FileType"
         {
@@ -167,7 +173,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SaveClipbaord"
         "ProductCode" = "8:{A836D7EE-1E90-4F5E-9C70-FA2710232EF8}"
-        "PackageCode" = "8:{670ACE74-CAF3-48FE-AEA5-2474C12D3019}"
+        "PackageCode" = "8:{DC4EFE4C-1A5D-4CCF-8EB8-42AF82150B8E}"
         "UpgradeCode" = "8:{C4A1A214-8AF8-4679-AA46-DA3FF7032AFB}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -315,7 +321,7 @@
                                                         }
                                                         "Values"
                                                         {
-                                                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_B08A827DA85248CAB729A83FB8AEE6A4"
+                                                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_28AE1AA4C7734160B1AE92DCDB41F3F7"
                                                             {
                                                             "Name" = "8:"
                                                             "Condition" = "8:"
@@ -780,6 +786,34 @@
         }
         "ProjectOutput"
         {
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_174D3AFC79A140E4827163103B6A9FEC"
+            {
+            "SourcePath" = "8:..\\SaveClipboardImg\\obj\\Release\\net6.0-windows\\apphost.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_3119D63190734BEBAB972C0166011491"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:Release|Any CPU"
+            "OutputGroupCanonicalName" = "8:PublishItems"
+            "OutputProjectGuid" = "8:{54B43B95-BAA2-461A-9E60-99B5CE9BA3F9}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
         }
     }
 }
